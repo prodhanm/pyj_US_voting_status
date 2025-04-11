@@ -3,17 +3,12 @@ import java.util.Scanner;
 class Vote {
     public static boolean voteStatus(int age, boolean citizen) {
 
-        if(age >= 18) {
-            if(!citizen) {
-                return false;
-            }
-            else {
-                return true;
-            }
-        } 
-        else {
+        if(age >= 18 && citizen) {
+            return true;
+        } else {
             return false;
         }
+           
     }
 
     public static void main(String[] args) {
